@@ -118,4 +118,8 @@ To check if it worked go to AD Users and Computers to see if the OU was created 
 
 And that'll be all for the server and user creation now to create a VM for a user device. 
 
+Create a new Windows 10 VM and the only setting we need to change is the network adapter to internal network
+<br> <img src ="https://i.imgur.com/6BFQkvR.png"> 
+
+<br>In the setup we want to use Windows 10 Pro and don't choose a network so we can connect to the DC 
 
