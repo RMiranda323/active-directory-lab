@@ -98,3 +98,24 @@ Now we just need to authorize our DHCP Server
 <br> Right click > Authorize 
 <br> <img src="https://i.imgur.com/ziSR3z2.png">
 <br> Might have to refresh sometimes but if the arrows on ipv4/ipv6 are green then it's working 
+
+Next we're going to change a setting in the server manager to allow users on the server access to the internet
+<br>It's in Dashboard > Configure this local server > IE Enhanced Security Configuration and turn it off 
+<br><img src = "https://i.imgur.com/cROzjc1.png">
+<br><b>Note: Don't do this in a production environment</b>
+
+Now I'm going to create a lot of users to simulate a working server. I'm going to use a <a href = "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbERxbzNEbkhIWWxfWjg4blN2ekpUcjRjcDVvQXxBQ3Jtc0tuX1ZoRjJqanFjOGdlX2t4LUFnYmY3SHo4MEVadkxMS184TUd1WGJIdVZ5XzJtNVZrMWdPcWl3NWJfNGpkdXNPbWFjaGJlY3hDcU9lT09kaDFVd002WUM3dnp1S1g1VVlpcHBLYk9GNGdVeC05WkFSOA&q=https%3A%2F%2Fgithub.com%2Fjoshmadakor1%2FAD_PS%2Farchive%2Frefs%2Fheads%2Fmaster.zip&v=MHsI8hJmggI"> script made by Josh Madakor</a> to create the users.
+
+Once it's downloaded just open the "1_CREATE_USERS" script using Windows Powershell ISE running on admin mode
+<br> Before we can run it we have to use the command Set-ExecutionPolicy Unrestricted to allow us to run the script
+<br> <img src = "https://i.imgur.com/2pKBVTo.png">
+<br> Note: Again do not do anything that can compromise security in a non-lab environment 
+
+Summary of script: using a foreach loop on a list of names it will create a user account with the first and last name, user of first initial lastname and password of "Password1" for simplicity. It will also create an Organizational Unit named Users and add the new accounts into it.
+
+To check if it worked go to AD Users and Computers to see if the OU was created and filled with users
+<br> <img src = "https://i.imgur.com/6ewptFL.png">
+
+And that'll be all for the server and user creation now to create a VM for a user device. 
+
+
