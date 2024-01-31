@@ -123,3 +123,34 @@ Create a new Windows 10 VM and the only setting we need to change is the network
 
 <br>In the setup we want to use Windows 10 Pro and don't choose a network so we can connect to the DC 
 
+In the client VM I'm gonna do a quick ipconfig and ping command to see that it is connected to the DC and the DC is working
+<br><img src = "https://i.imgur.com/ckICBbr.png">
+<br>The default gateway is the IP of the DC and we can ping websites so it worked!
+
+Now I'm going to rename the PC and change it's domain using advanced rename settings
+<br><img src = "https://i.imgur.com/PdSvERM.png">
+<br>The computer will ask you to login with a domain user account and then restart
+
+Now if we go to the DC and check the DHCP server we can see the Client1 VM has an IP lease
+<br><img src =" https://i.imgur.com/PdSvERM.png">
+
+The CLIENT1 computer is also now in the "Computer" folder of the AD Users and Computers.
+<br><img src = "https://i.imgur.com/ylXn2cY.png">
+
+Since it is now part of the Domain we should be able to use any of the Users' credentials that we created earlier
+
+I'm just gonna grab a username that sounds cool and we know the pass is "Password1" 
+<br><img src = "https://i.imgur.com/qma0e5x.png">
+
+And try to login
+<br><img src = "https://i.imgur.com/KoMBmE0.png">
+
+Success!
+<br><img src = "https://i.imgur.com/KoMBmE0.png">
+
+To wrap it up we're just gonna use the "whoami" and "ping" commands to show everything is working
+<br><img src = "https://i.imgur.com/PRNOR0S.png">
+
+And with that we're done for now. Bye!
+
+
