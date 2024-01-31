@@ -11,7 +11,7 @@ Practice using active directory.
 <h2>Lab Steps</h2>
 
 I'm first going to create the Domain Controller (DC) for the lab. The DC virtual machine will be created using the Windows Server ISO.
-<img src = "https://i.imgur.com/uhB4dNc.png">
+<br><img src = "https://i.imgur.com/uhB4dNc.png">
 <br>The only setting that must be configured is to add an internal network adapter 
 
 Setting > Network > Adapter 2 > Enable Adapter > Attached to: Internal Network
