@@ -15,7 +15,7 @@ I'm first going to create the Domain Controller (DC) for the lab. The DC virtual
 <br>The only setting that must be configured is to add an internal network adapter 
 
 Setting > Network > Adapter 2 > Enable Adapter > Attached to: Internal Network
-<img src = "https://i.imgur.com/sJfBrnj.png" >
+<br><img src = "https://i.imgur.com/sJfBrnj.png">
 
 
 In the DC machine we need to configure our IP so we can eventually get a network setup that looks something like this
